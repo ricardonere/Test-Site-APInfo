@@ -21,8 +21,9 @@ public class HomePage {
     public HomePage(WebDriver driverDoTeste) {
         this.driver = driverDoTeste;
     }
-    public void clicarAreaProfissionais(){
+    public void clicarAreaProfissionais() throws InterruptedException {
         driver.findElement(By.xpath(botaoAcessoProfissionais)).click();
+        Thread.sleep( 3000);
     }
     public void clicarPesquisarVagas(){
         driver.findElement(By.xpath(botaoPesquisarVagas)).click();
