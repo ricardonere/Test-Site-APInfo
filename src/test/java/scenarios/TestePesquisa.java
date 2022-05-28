@@ -17,18 +17,21 @@ public class TestePesquisa {
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         homePage = new HomePage(driver);
-        driver.get("https://www.apinfo.com/apinfo/inc/list4.cfm");
+        driver.get("https://www.apinfo.com/apinfo/");
     }
     @Test
     public void TestePesquisa()throws InterruptedException{
-    homePage.clicarAreaProfissionais();
-    homePage.clicarPesquisarVagas();
+
+
     homePage.digitarPalavraChave();
-    homePage.clicarPesquisarDescricao();
-    homePage.clicarPesquisarPalavra();
-    homePage.clicarFiltrar();
-
-
+    homePage.clicarBuscar();
+    homePage.clicarConcordar();
+    homePage.limparPesquisa();
+    homePage.digitarSegundaOcupacao();
+    homePage.clicarNovaBusca();
+    homePage.clicarFaleConosco();
+    homePage.clicarDuvidasProfissionais();
+    homePage.clicarDicasBomCurriculo();
 
 
 

@@ -6,40 +6,53 @@ import org.openqa.selenium.WebDriver;
 public class HomePage {
     WebDriver driver;
 
-    String botaoAcessoProfissionais= "//a[contains(text(),'Profissionais')]";
 
-    String botaoPesquisarVagas= "//body/div[3]/div[1]/nav[1]/section[1]/ul[1]/li[1]/ul[1]/li[1]/a[1]";
+    String digitarPalavraChave= "//input[@id='i-busca']";
+    String clicarBuscar= "//input[@id='btn-busca']";
+    String clicarConcordar= "/html/body/div[1]/div";
+    String limparPesquisa= "//a[contains(text(),'Limpar Pesquisa')]";
 
-    String digitarPalavraChave= "//input[@id='keyw']";
+    String digitarSegundaOcupacao= "//input[@id='keyw']";
 
-    String clicarPesquisarDescricao= "//input[@id='radio4']";
+    String clicarNovaBusca= "//input[@id='']";
 
-    String clicarPesquisarPalavra= "//input[@id='radio2']";
+    String clicarFaleConosco= "//a[contains(text(),'Fale Conosco')]";
 
-    String clicarFiltrar= "//input[@id='']";
+    String clicarDuvidasProfissionais= "//a[contains(text(),'Dúvidas frequentes profissionais')]";
+
+    String clicarDicasBomCurriculo= "//h3[contains(text(),'Como fazer um bom currículo detalhado ?')]";
 
     public HomePage(WebDriver driverDoTeste) {
         this.driver = driverDoTeste;
     }
-    public void clicarAreaProfissionais() throws InterruptedException {
-        driver.findElement(By.xpath(botaoAcessoProfissionais)).click();
-        Thread.sleep( 3000);
-    }
-    public void clicarPesquisarVagas(){
-        driver.findElement(By.xpath(botaoPesquisarVagas)).click();
-    }
+
     public void digitarPalavraChave(){
         driver.findElement(By.xpath(digitarPalavraChave)).sendKeys("QA JR");
     }
-    public void clicarPesquisarDescricao(){
-        driver.findElement(By.xpath(clicarPesquisarDescricao)).click();
-    }
-    public void clicarPesquisarPalavra(){
-        driver.findElement(By.xpath(clicarPesquisarPalavra)).click();
-    }
-    public void clicarFiltrar(){
-        driver.findElement(By.xpath(clicarFiltrar)).click();
-    }
-    //https://www.apinfo.com/apinfo/inc/list4.cfm          site
 
+    public void clicarBuscar(){
+        driver.findElement(By.xpath(clicarBuscar)).click();
+    }
+    public void clicarConcordar(){
+        driver.findElement(By.xpath(clicarConcordar)).click();
+    }
+    public void limparPesquisa() throws InterruptedException {
+        driver.findElement(By.xpath(limparPesquisa)).click();
+    }
+    public void digitarSegundaOcupacao(){
+        driver.findElement(By.xpath(digitarSegundaOcupacao)).sendKeys("Desenvolvedor");
+    }
+    public void clicarNovaBusca(){
+        driver.findElement(By.xpath(clicarNovaBusca)).click();
+    }
+    public void clicarFaleConosco(){
+        driver.findElement(By.xpath(clicarFaleConosco)).click();
+    }
+
+    public void clicarDuvidasProfissionais(){
+        driver.findElement(By.xpath(clicarDuvidasProfissionais)).click();
+    }
+    public void clicarDicasBomCurriculo(){
+        driver.findElement(By.xpath(clicarDicasBomCurriculo)).click();
+    }
 }
