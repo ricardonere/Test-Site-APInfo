@@ -52,8 +52,9 @@ public class VagasPage {
     public void clicarSegundoCurriculo(){
         driver.findElement(By.xpath(clicarSegundoCurriculo)).click();
     }
-    public void clicarInformacao(){
+    public void clicarInformacao() throws InterruptedException {
         driver.findElement(By.xpath(clicarInformacao)).click();
+        Thread.sleep( 3000);
     }
     public void pesquisaProfMaisRequisitados(){
         driver.findElement(By.xpath(pesquisaProfMaisRequisitados)).click();
